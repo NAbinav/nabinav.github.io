@@ -11,14 +11,14 @@
             max-width: 65ch;
             margin: 0 auto;
             padding: 2rem;
-            background-color: #fff;
-            color: #333;
+            background-color: #0d1117;
+            color: #e6edf3;
         }
         
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            color: #222;
+            color: #f0f6fc;
             font-weight: normal;
         }
         
@@ -26,8 +26,8 @@
             font-size: 1.5rem;
             margin-top: 2.5rem;
             margin-bottom: 1rem;
-            color: #444;
-            border-bottom: 1px solid #eee;
+            color: #f0f6fc;
+            border-bottom: 1px solid #30363d;
             padding-bottom: 0.3rem;
         }
         
@@ -35,7 +35,7 @@
             font-size: 1.2rem;
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
-            color: #555;
+            color: #f0f6fc;
         }
         
         p {
@@ -44,109 +44,182 @@
         
         .intro {
             font-size: 1.1rem;
-            color: #666;
+            color: #8b949e;
             margin-bottom: 2rem;
         }
         
         .contact {
-            color: #666;
+            color: #8b949e;
             margin-bottom: 2rem;
         }
         
         .contact a {
-            color: #0066cc;
+            color: #58a6ff;
             text-decoration: none;
         }
         
         .contact a:hover {
             text-decoration: underline;
+            color: #79c0ff;
         }
         
         .project {
             margin-bottom: 1.5rem;
+            background-color: #161b22;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+        
+        .project h3 {
+            margin-top: 0;
+            color: #58a6ff;
         }
         
         .tech-stack {
             font-size: 0.9rem;
-            color: #777;
+            color: #7d8590;
             font-style: italic;
+            margin-top: 0.5rem;
         }
         
         .skills {
-            color: #666;
+            color: #e6edf3;
+        }
+        
+        .skills p {
+            background-color: #161b22;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid #58a6ff;
+            margin-bottom: 0.5rem;
         }
         
         .education {
-            color: #666;
+            color: #e6edf3;
+            background-color: #161b22;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+        
+        .education strong {
+            color: #f0f6fc;
+        }
+        
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: #79c0ff;
+        }
+        
+        /* Firefox Reader Mode compatibility */
+        article {
+            max-width: none;
+        }
+        
+        strong {
+            color: #f0f6fc;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .project {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hey, I'm Abinav.</h1>
-    
-    <p class="intro">Currently figuring out life, one line of code at a time.</p>
-    
-    <div class="contact">
-        <a href="mailto:abinavn0506@gmail.com">abinavn0506@gmail.com</a> • 
-        <a href="https://linkedin.com/in/abinav-n">linkedin</a> • 
-        <a href="https://github.com/NAbinav">github</a> • 
-        <a href="https://leetcode.com/NAbinav">leetcode</a> 
-    </div>
+    <article>
+        <header>
+            <h1>Hey, I'm Abinav.</h1>
+            
+            <p class="intro">Currently figuring out life, one line of code at a time.</p>
+            
+            <div class="contact">
+                <a href="mailto:abinavn0506@gmail.com">abinavn0506@gmail.com</a> • 
+                <a href="https://linkedin.com/in/abinav-n">linkedin</a> • 
+                <a href="https://github.com/NAbinav">github</a> • 
+                <a href="https://leetcode.com/NAbinav">leetcode</a> 
+            </div>
+        </header>
 
-    <h2>About</h2>
-    
-    <p>I'm a B.Tech student at VIT Chennai, curious about all things tech. I enjoy coding, learning new tools, and figuring out how to build stuff that actually works. Still figuring things out, but having fun along the way.</p>
-    
-    <p>Always open to learning, collaborating, or just chatting about tech!</p>
+        <section>
+            <h2>About</h2>
+            
+            <p>I'm a B.Tech student at VIT Chennai, curious about all things tech. I enjoy coding, learning new tools, and figuring out how to build stuff that actually works. Still figuring things out, but having fun along the way.</p>
+            
+            <p>Always open to learning, collaborating, or just chatting about tech!</p>
+        </section>
 
-    <h2>What I'm Working With</h2>
-    
-    <div class="skills">
-        <p>Languages I actually use: Go, Python, C, C++, Java, JavaScript, SQL</p>
-        <p>Backend stuff: FastAPI, REST APIs, WebSockets, PostgreSQL, MongoDB</p>
-        <p>Frontend when needed: Next.js, React, HTML5, CSS3, Tailwind CSS</p>
-        <p>Other tools: Docker, Git, TensorFlow, Scikit-learn</p>
-    </div>
+        <section>
+            <h2>What I'm Working With</h2>
+            
+            <div class="skills">
+                <p><strong>Languages I actually use:</strong> Go, Python, C, C++, Java, JavaScript, SQL</p>
+                <p><strong>Backend stuff:</strong> FastAPI, REST APIs, WebSockets, PostgreSQL, MongoDB</p>
+                <p><strong>Frontend when needed:</strong> Next.js, React, HTML5, CSS3, Tailwind CSS</p>
+                <p><strong>Other tools:</strong> Docker, Git, TensorFlow, Scikit-learn</p>
+            </div>
+        </section>
 
-    <h2>Projects</h2>
-    
-    <div class="project">
-        <h3>DbaaS (Database-as-a-Service)</h3>
-        <p>Built a REST API in Go that handles 100+ requests per minute. Created a dynamic query engine and cut integration time by 40%. It's actually pretty robust—99.9% uptime and all that.</p>
-        <p class="tech-stack">Go, PostgreSQL, JWT, REST API</p>
-    </div>
-    
-    <div class="project">
-        <h3>AI Online Compiler</h3>
-        <p>Web compiler with AI auto-complete using Google Gemini API. Secured everything with Docker-in-Docker because security matters, even in side projects.</p>
-        <p class="tech-stack">FastAPI, Python, Docker, Gemini API</p>
-    </div>
-    
-    <div class="project">
-        <h3>Recipe Recommender using Computer Vision</h3>
-        <p>Point your camera at food, get recipe suggestions. Used YOLOv5 trained on Open Images Dataset to identify ingredients.</p>
-        <p class="tech-stack">Python, YOLOv5, Pandas</p>
-    </div>
-    
-    <div class="project">
-        <h3>Tourist Path Optimizer</h3>
-        <p>Optimizes travel routes using TSP algorithms and real-time traffic data. Because nobody likes being stuck in traffic while sightseeing.</p>
-        <p class="tech-stack">Python, FastAPI, Distance Matrix API, TSP Algorithms</p>
-    </div>
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <h3>DbaaS (Database-as-a-Service)</h3>
+                <p>Built a REST API in Go that handles 100+ requests per minute. Created a dynamic query engine and cut integration time by 40%. It's actually pretty robust—99.9% uptime and all that.</p>
+                <p class="tech-stack">Go, PostgreSQL, JWT, REST API</p>
+            </div>
+            
+            <div class="project">
+                <h3>AI Online Compiler</h3>
+                <p>Web compiler with AI auto-complete using Google Gemini API. Secured everything with Docker-in-Docker because security matters, even in side projects.</p>
+                <p class="tech-stack">FastAPI, Python, Docker, Gemini API</p>
+            </div>
+            
+            <div class="project">
+                <h3>Recipe Recommender using Computer Vision</h3>
+                <p>Point your camera at food, get recipe suggestions. Used YOLOv5 trained on Open Images Dataset to identify ingredients.</p>
+                <p class="tech-stack">Python, YOLOv5, Pandas</p>
+            </div>
+            
+            <div class="project">
+                <h3>Tourist Path Optimizer</h3>
+                <p>Optimizes travel routes using TSP algorithms and real-time traffic data. Because nobody likes being stuck in traffic while sightseeing.</p>
+                <p class="tech-stack">Python, FastAPI, Distance Matrix API, TSP Algorithms</p>
+            </div>
+        </section>
 
-    <h2>Education</h2>
-    
-    <div class="education">
-        <p><strong>Vellore Institute of Technology, Chennai</strong><br>
-        B.Tech in Electronics and Computer Engineering (2023-2027)<br>
-        GPA: 8.88/10</p>
-    </div>
+        <section>
+            <h2>Education</h2>
+            
+            <div class="education">
+                <p><strong>Vellore Institute of Technology, Chennai</strong><br>
+                B.Tech in Electronics and Computer Engineering (2023-2027)<br>
+                GPA: 8.88/10</p>
+            </div>
+        </section>
 
-    <h2>Get in Touch</h2>
-    
-    <p>If you want to chat about code, collaborate on something cool, or just say hi, feel free to reach out. I'm always up for interesting conversations.</p>
-    
-    <p><a href="mailto:abinavn0506@gmail.com">Drop me an email</a> or find me on <a href="https://linkedin.com/in/abinav-n">LinkedIn</a>.</p>
-
+        <section>
+            <h2>Get in Touch</h2>
+            
+            <p>If you want to chat about code, collaborate on something cool, or just say hi, feel free to reach out. I'm always up for interesting conversations.</p>
+            
+            <p><a href="mailto:abinavn0506@gmail.com">Drop me an email</a> or find me on <a href="https://linkedin.com/in/abinav-n">LinkedIn</a>.</p>
+        </section>
+    </article>
 </body>
 </html>
