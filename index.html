@@ -76,11 +76,43 @@
             color: #58a6ff;
         }
         
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-header h3 {
+            margin: 0;
+        }
+        
+        .github-link {
+            font-size: 0.9rem;
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        .github-link:hover {
+            color: #79c0ff;
+            text-decoration: underline;
+        }
+        
         .tech-stack {
             font-size: 0.9rem;
             color: #7d8590;
             font-style: italic;
             margin-top: 0.5rem;
+        }
+        
+        .project ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+            color: #e6edf3;
+        }
+        
+        .project li {
+            margin-bottom: 0.3rem;
         }
         
         .skills {
@@ -101,10 +133,28 @@
             padding: 1.5rem;
             border-radius: 6px;
             border: 1px solid #30363d;
+            margin-bottom: 1rem;
         }
         
         .education strong {
             color: #f0f6fc;
+        }
+        
+        .achievements {
+            background-color: #161b22;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+        
+        .achievements ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+            color: #e6edf3;
+        }
+        
+        .achievements li {
+            margin-bottom: 0.5rem;
         }
         
         a {
@@ -117,7 +167,6 @@
             color: #79c0ff;
         }
         
-        /* Firefox Reader Mode compatibility */
         article {
             max-width: none;
         }
@@ -138,6 +187,15 @@
             .project {
                 padding: 1rem;
             }
+            
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .github-link {
+                margin-top: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -146,32 +204,35 @@
         <header>
             <h1>Hey, I'm Abinav.</h1>
             
-            <p class="intro">Currently figuring out life, one line of code at a time.</p>
+            <p class="intro">Electronics and Computer Engineering student specializing in Go and backend development, building low-latency real-time systems and scalable cloud services.</p>
             
             <div class="contact">
                 <a href="mailto:abinavn0506@gmail.com">abinavn0506@gmail.com</a> • 
                 <a href="https://linkedin.com/in/abinav-n">linkedin</a> • 
                 <a href="https://github.com/NAbinav">github</a> • 
-                <a href="https://leetcode.com/NAbinav">leetcode</a> 
+                <a href="https://leetcode.com/NAbinav">leetcode</a> • 
+                <a href="tel:+919150055005">+91 9150055005</a>
             </div>
         </header>
 
         <section>
             <h2>About</h2>
             
-            <p>I'm a B.Tech student at VIT Chennai, curious about all things tech. I enjoy coding, learning new tools, and figuring out how to build stuff that actually works. Still figuring things out, but having fun along the way.</p>
+            <p>I'm a B.Tech student at VIT Chennai with strong experience in systems programming, performance optimization, and production-grade application development. I specialize in building RESTful APIs, WebSockets, and scalable cloud services using Go and Python.</p>
             
-            <p>Always open to learning, collaborating, or just chatting about tech!</p>
+            <p>Currently focused on containerization, low-latency systems, and creating tools that solve real problems. Always open to learning, collaborating, or chatting about tech!</p>
         </section>
 
         <section>
             <h2>What I'm Working With</h2>
             
             <div class="skills">
-                <p><strong>Languages I actually use:</strong> Go, Python, C, C++, Java, JavaScript, SQL</p>
-                <p><strong>Backend stuff:</strong> FastAPI, REST APIs, WebSockets, PostgreSQL, MongoDB</p>
-                <p><strong>Frontend when needed:</strong> Next.js, React, HTML5, CSS3, Tailwind CSS</p>
-                <p><strong>Other tools:</strong> Docker, Git, TensorFlow, Scikit-learn</p>
+                <p><strong>Languages:</strong> Go, Python, C, C++, Java, JavaScript, SQL</p>
+                <p><strong>Backend & APIs:</strong> FastAPI, RESTful APIs, WebSockets, OAuth2, JWT, Rate Limiting, Query Optimization</p>
+                <p><strong>Databases:</strong> PostgreSQL, MongoDB, Cloudflare D1</p>
+                <p><strong>Frontend:</strong> Next.js, React, Tailwind CSS, Vite</p>
+                <p><strong>DevOps & Cloud:</strong> Docker, Google Cloud Platform (GCP), Cloud Run, Artifact Registry, CI/CD</p>
+                <p><strong>Others:</strong> Git, Linux, System Design, Performance Tuning, Gemini API Integration</p>
             </div>
         </section>
 
@@ -179,27 +240,74 @@
             <h2>Projects</h2>
             
             <div class="project">
-                <h3>DbaaS (Database-as-a-Service)</h3>
-                <p>Built a REST API in Go that handles 100+ requests per minute. Created a dynamic query engine and cut integration time by 40%. It's actually pretty robust—99.9% uptime and all that.</p>
-                <p class="tech-stack">Go, PostgreSQL, JWT, REST API</p>
+                <div class="project-header">
+                    <h3>DeployHub – Automated Containerized Deployment Platform</h3>
+                    <a href="https://github.com/NAbinav" class="github-link">GitHub →</a>
+                </div>
+                <ul>
+                    <li>Built automated deployment platform with 3–5 minute cycles and sub-300ms API latency</li>
+                    <li>Designed reverse proxy with dynamic subdomain routing for 7+ frameworks (Go, FastAPI, Flask, Next.js, Vite, NodeJS, static sites)</li>
+                    <li>Integrated Cloud Run and Artifact Registry, reducing deployment overhead by 70%</li>
+                    <li>Supported 10+ concurrent projects with 99% uptime and automatic rollback capabilities</li>
+                </ul>
+                <p class="tech-stack">Go, PostgreSQL, GCP Cloud Run, Artifact Registry, Cloudflare D1, Cloudflare Workers, Vite + React</p>
             </div>
             
             <div class="project">
-                <h3>AI Online Compiler</h3>
-                <p>Web compiler with AI auto-complete using Google Gemini API. Secured everything with Docker-in-Docker because security matters, even in side projects.</p>
-                <p class="tech-stack">FastAPI, Python, Docker, Gemini API</p>
+                <div class="project-header">
+                    <h3>Brogramiz – Real-Time Collaborative IDE</h3>
+                    <a href="https://github.com/NAbinav" class="github-link">GitHub →</a>
+                </div>
+                <ul>
+                    <li>Developed real-time collaborative coding platform with sub-100ms synchronization latency via WebSockets</li>
+                    <li>Created secure Docker sandbox environment supporting 5 programming languages with safe code execution</li>
+                    <li>Integrated Gemini 2.5 Flash API for AI-powered code completion, reducing development time by 30%</li>
+                    <li>Handled 50+ concurrent users with 99.8% session uptime</li>
+                </ul>
+                <p class="tech-stack">Python, FastAPI, WebSockets, Docker, Gemini API</p>
             </div>
             
             <div class="project">
-                <h3>Recipe Recommender using Computer Vision</h3>
+                <div class="project-header">
+                    <h3>ReSTQL – Dynamic REST API Generator</h3>
+                    <a href="https://github.com/NAbinav" class="github-link">GitHub →</a>
+                </div>
+                <ul>
+                    <li>Built dynamic REST API generator with query parser supporting 10+ SQL operators and complex OR logic</li>
+                    <li>Implemented OAuth2 authentication, API key management, and per-user schema isolation for secure multi-tenancy</li>
+                    <li>Added leaky bucket rate limiter sustaining 200+ requests/second while preventing abuse</li>
+                    <li>Automated CRUD endpoint generation for any PostgreSQL table, reducing API development time by 80%</li>
+                    <li>Ensured 100% SQL injection protection via parameterized queries and strict input validation</li>
+                </ul>
+                <p class="tech-stack">Go, PostgreSQL, OAuth2, REST API</p>
+            </div>
+            
+            <div class="project">
+                <div class="project-header">
+                    <h3>Recipe Recommender using Computer Vision</h3>
+                </div>
                 <p>Point your camera at food, get recipe suggestions. Used YOLOv5 trained on Open Images Dataset to identify ingredients.</p>
                 <p class="tech-stack">Python, YOLOv5, Pandas</p>
             </div>
             
             <div class="project">
-                <h3>Tourist Path Optimizer</h3>
+                <div class="project-header">
+                    <h3>Tourist Path Optimizer</h3>
+                </div>
                 <p>Optimizes travel routes using TSP algorithms and real-time traffic data. Because nobody likes being stuck in traffic while sightseeing.</p>
                 <p class="tech-stack">Python, FastAPI, Distance Matrix API, TSP Algorithms</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Achievements</h2>
+            
+            <div class="achievements">
+                <ul>
+                    <li>Developed IBM Qiskit Fall Fest 2024 website, ranked #1 globally among university hackathon websites</li>
+                    <li>Built Next.js event portal serving 900+ concurrent users with zero downtime during university festival</li>
+                    <li>Secured 2nd place among 50+ teams in 24-hour hackathon, delivering complete full-stack application</li>
+                </ul>
             </div>
         </section>
 
@@ -208,8 +316,14 @@
             
             <div class="education">
                 <p><strong>Vellore Institute of Technology, Chennai</strong><br>
-                B.Tech in Electronics and Computer Engineering (2023-2027)<br>
+                B.Tech in Electronics and Computer Engineering (Aug 2023 – May 2027)<br>
                 GPA: 8.88/10</p>
+            </div>
+            
+            <div class="education">
+                <p><strong>Chinmaya Vidhyalaya Higher Sec. School, Trichy</strong><br>
+                Higher Secondary Certificate (May 2022 – May 2023)<br>
+                95.1%</p>
             </div>
         </section>
 
